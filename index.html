@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Once Upon A Time...</title>
+  <script defer src="script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="max-w-3xl mx-auto py-10 px-4">
+    <h1 class="text-4xl font-bold mb-4">Once Upon A Time...</h1>
+    <div id="story" class="bg-white p-4 rounded shadow mb-4 h-64 overflow-y-scroll"></div>
+
+    <h2 class="text-xl font-semibold mb-2">Add your next part:</h2>
+    <textarea id="contribution" class="w-full p-2 border rounded mb-2" rows="4"></textarea>
+    <div class="mb-2">
+      <span>Characters: <span id="charCount">0</span></span> |
+      <span>Cost: ₹<span id="cost">0.00</span></span>
+    </div>
+    <input id="username" class="w-full p-2 border rounded mb-2" placeholder="Your name (optional)" />
+    <button id="payAndSubmit" class="bg-blue-600 text-white px-4 py-2 rounded">Pay & Submit</button>
+
+    <h2 class="text-xl font-semibold mt-6 mb-2">Leaderboard:</h2>
+    <div id="leaderboard"></div>
+
+    <h2 class="text-xl font-semibold mb-2">Recent Writers:</h2>
+    <div id="recentWriters"></div>
+  </div>
+</body>
+</html>
