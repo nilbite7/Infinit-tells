@@ -1,3 +1,6 @@
+const CASHFREE_APP_ID = process.env.CASHFREE_APP_ID;
+const CASHFREE_SECRET_KEY = process.env.CASHFREE_SECRET_KEY;
+const CASHFREE_BASE_URL = process.env.CASHFREE_BASE_URL || 'https://sandbox.cashfree.com/pg/orders';
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
