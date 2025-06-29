@@ -49,14 +49,14 @@ app.post('/create-order', async (req, res) => {
     }
   };
 
-  const response = await axios.post('https://sandbox.cashfree.com/pg/orders', data, {
-    headers: {
-      'Content-Type': 'application/json',
-      'x-client-id': 'YOUR_CASHFREE_APP_ID',
-      'x-client-secret': 'YOUR_CASHFREE_SECRET_KEY',
-      'x-api-version': '2022-09-01'
-    }
-  });
+  const response = await axios.post(CASHFREE_BASE_URL, data, {
+  headers: {
+    'Content-Type': 'application/json',
+    'x-client-id': CASHFREE_APP_ID,
+    'x-client-secret': CASHFREE_SECRET_KEY,
+    'x-api-version': '2022-09-01'
+  }
+});
 
   contributions.push({ orderId, text, username, chars, status: 'pending' });
   saveStory();
